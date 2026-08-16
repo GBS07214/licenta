@@ -2,7 +2,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 import '../models/chat_message.dart';
 
 class GeminiService {
-  static const String _apiKey = 'YOUR_GEMINI_API_KEY_HERE';
+  static const String _apiKey = 'AIzaSyAQ.Ab8RN6IoWBi-ozv4cJCli6FmSSRg3pr5k-OdTf28BUiaQA_O8Q';
   late final GenerativeModel _model;
   final List<ChatMessage> _chatHistory = [];
 
@@ -31,10 +31,6 @@ Restricții:
 ''';
 
   Future<String> sendMessage(String userMessage) async {
-    if (_apiKey == 'YOUR_GEMINI_API_KEY_HERE') {
-      return 'Te rog configurează API key-ul Gemini în lib/services/gemini_service.dart. Obține gratuit de la: https://aistudio.google.com/app/apikey';
-    }
-
     try {
       final content = [
         Content.text(_systemPrompt),
