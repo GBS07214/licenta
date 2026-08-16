@@ -7,8 +7,8 @@ import 'screens/auth/login_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // TODO: Inițializează Firebase
-  // await Firebase.initializeApp();
+  // Inițializează Firebase
+  await Firebase.initializeApp();
   
   runApp(const MyApp());
 }
